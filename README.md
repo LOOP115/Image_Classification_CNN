@@ -19,9 +19,9 @@
 
 ### 1.1. CNN implementation
 
-* Implement the CNN architecture shown above in Figure 1.
-* Use ReLU activation functions for all layers except the final layer, which should use the Softmax activation function.
-* Use the Adam optimiser and SparseCategoricalCrossentropy loss.
+* Implement the CNN architecture shown above in Figure 1. ✔
+* Use ReLU activation functions for all layers except the final layer, which should use the Softmax activation function. ✔
+* Use the Adam optimiser and SparseCategoricalCrossentropy loss. ✔
 * Train this on the yoga32 dataset – what do you observe?
 
 ### 1.2. Regularisation and data augmentation
