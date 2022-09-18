@@ -9,10 +9,8 @@ import matplotlib.cm as cm
 import math
 import secrets
 
-
 print("TensorFlow version: ", tf.__version__)
 print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
-
 
 data_dir = "yoga32"
 train_batch_size = 32
@@ -21,7 +19,7 @@ rand_seed = secrets.randbelow(1_000_000_000)  # random seed for train/val split
 
 # Get training images from 'train' directory
 train_data = tf.keras.utils.image_dataset_from_directory(
-    data_dir+'/train',
+    data_dir + '/train',
     validation_split=0.2,
     subset="training",
     seed=rand_seed,
@@ -30,7 +28,7 @@ train_data = tf.keras.utils.image_dataset_from_directory(
 
 # Get validation images from 'train' directory
 val_data = tf.keras.utils.image_dataset_from_directory(
-    data_dir+'/train',
+    data_dir + '/train',
     validation_split=0.2,
     subset="validation",
     seed=rand_seed,
@@ -41,9 +39,24 @@ val_data = tf.keras.utils.image_dataset_from_directory(
 class_names = train_data.class_names
 print(class_names)
 
+for images, labels in val_data.take(1):
+    print(images)
+    print(labels)
+
+# Plot training and validation accuracy of a model
+def plot_model_history(history):
+    plt.plot(history.history['accuracy'], label='Train')
+    plt.plot(history.history['val_accuracy'], label='Validation')
+    plt.ylabel('Accuracy')
+    plt.xlabel('Epoch')
+    plt.title('Training and validating accuracy')
+    plt.legend()
+    plt.show()
+
+
 # 1. CNN Implementation
 # 1.1 Basic architecture
-cnn_model = keras.Sequential(
+cnn_model1 = keras.Sequential(
     [
         layers.Input((32, 32, 3)),
 
@@ -60,14 +73,15 @@ cnn_model = keras.Sequential(
     ],
 )
 
-cnn_model.compile(optimizer='adam', loss=tf.keras.losses.SparseCategoricalCrossentropy(), metrics=['accuracy'])
 
-history_cnn = cnn_model.fit(train_data, validation_data=val_data, epochs=10)
+# cnn_model1.compile(optimizer='adam', loss=tf.keras.losses.SparseCategoricalCrossentropy(), metrics=['accuracy'])
+# history1 = cnn_model1.fit(train_data, validation_data=val_data, epochs=10)
+# plot_model_history(history1)
 
-# plt.plot(history_cnn.history['accuracy'], label='Train')
-# plt.plot(history_cnn.history['val_accuracy'], label='Validation')
-# plt.ylabel('Accuracy')
-# plt.xlabel('Epoch')
-# plt.title('Training and validating accuracy')
-# plt.legend()
-# plt.show()
+# Get test images from 'test' directory
+test_data = tf.keras.utils.image_dataset_from_directory(
+    data_dir+'/test',
+    image_size=(32, 32),
+    batch_size=7,
+    shuffle=False,
+)

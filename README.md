@@ -17,27 +17,33 @@
 
 ## Task
 
-### 1.1. CNN implementation
+### 1.1. CNN implementation ✔
 
 * Implement the CNN architecture shown above in Figure 1. ✔
 * Use ReLU activation functions for all layers except the final layer, which should use the Softmax activation function. ✔
 * Use the Adam optimiser and SparseCategoricalCrossentropy loss. ✔
 * Train this on the yoga32 dataset – what do you observe?
+  * Overfitting
 
-### 1.2. Regularisation and data augmentation
+
+### 1.2. Regularisation and data augmentation ✔
 
 * Modify the basic architecture by adding some form of (a) **regularisation** and (b) **data augmentation**.
-* Train your new network on the yoga32 dataset – how does the training performance change?
+  * Regularisation ✔
+  * Dropout ✔
+  * Augmentation ✔
+
+* Train your new network on the yoga32 dataset – how does the training performance change? ✔
 * Your write-up should include a brief **description and justification** of your choice of regularisation
-  and data augmentation schemes.
-* It should also show the **plots of training and validation accuracy** for the original network (without regularisation+data augmentation) and the network with these modifications and explain any differences that you observe in the training behaviour.
+  and data augmentation schemes. ✔
+* It should also show the **plots of training and validation accuracy** for the original network (without regularisation+data augmentation) and the network with these modifications and explain any differences that you observe in the training behaviour. ✔
 
-### 2. Error analysis
+### 2. Error analysis ✔
 
-* Evaluate your network from part 1.2 on the yoga32 test set.
-* In your write-up, present the overall classification accuracy and the average accuracy for each of the 10 classes.
-* Explain the performance of the CNN model, using example images from the test set to illustrate your discussion.
-* What classes/images were difficult for this model, and why?
+* Evaluate your network from part 1.2 on the yoga32 test set. ✔
+* In your write-up, present the overall classification accuracy and the average accuracy for each of the 10 classes. ✔
+* Explain the performance of the CNN model, using example images from the test set to illustrate your discussion. ✔
+* What classes/images were difficult for this model, and why? ✔
 
 ### 3. Visualisation
 
