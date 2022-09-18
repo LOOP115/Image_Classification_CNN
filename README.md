@@ -4,6 +4,8 @@
 
 ### [Dataset](resources/yoga32.zip)
 
+### [Report](resources/report.pdf)
+
 
 
 ## Overview
@@ -45,23 +47,23 @@
 * Explain the performance of the CNN model, using example images from the test set to illustrate your discussion. ✔
 * What classes/images were difficult for this model, and why? ✔
 
-### 3. Visualisation
+### 3. Visualisation ✔
 
 * Visualise the feature space that your network uses to classify images by implementing a nearest neighbour analysis. ✔
 * Use the embedding from the last convolutional layer of your network from part 1.2 after it has been maxpooled (e.g., extract this layer at the point at which it is flattened and sent to the classification layer). ✔
 * To visualise how images are organised in this feature space, implement a nearest neighbour analysis. ✔
 * For each test image, find the 5 nearest neighbours in the training set. ✔
 * Use **Euclidean distance** to compare the feature vector from the test image to the feature vectors of the training images. ✔
-* In your write-up, show nearest neighbours for multiple test images to illustrate the feature space and explain your model’s performance. 
-* Critically evaluate your model – has it learned a good feature space for this classification task?
+* In your write-up, show nearest neighbours for multiple test images to illustrate the feature space and explain your model’s performance. ✔
+* Critically evaluate your model – has it learned a good feature space for this classification task? ✔
 
 
 
 ## Submission
 
-* You should make two submissions on the LMS: your code and a short written report explaining your method and results.
-* The response to each question should be **no more than 500 words**.
-* Please submit your code and written report separately under the **Assignment 2: Code** and the **Assignment 2: Report** links on Canvas.
-* Your code submission should include the Jupyter Notebook (please use the provided template) with your code and any additional files we will need to run your code, if any (do not include the yoga32 dataset).
-* Your written report should be a .pdf with your answers to each of the questions. The report should address the questions posed in this assignment and include any images, diagrams, or tables required by the question.
+* You should make two submissions on the LMS: your code and a short written report explaining your method and results. ✔
+* The response to each question should be **no more than 500 words**. ✔
+* Please submit your code and written report separately under the **Assignment 2: Code** and the **Assignment 2: Report** links on Canvas. ✔
+* Your code submission should include the Jupyter Notebook (please use the provided template) with your code and any additional files we will need to run your code, if any (do not include the yoga32 dataset). ✔
+* Your written report should be a .pdf with your answers to each of the questions. The report should address the questions posed in this assignment and include any images, diagrams, or tables required by the question. ✔
 
