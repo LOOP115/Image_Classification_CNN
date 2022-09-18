@@ -47,12 +47,12 @@
 
 ### 3. Visualisation
 
-* Visualise the feature space that your network uses to classify images by implementing a nearest neighbour analysis.
-* Use the embedding from the last convolutional layer of your network from part 1.2 after it has been maxpooled (e.g., extract this layer at the point at which it is flattened and sent to the classification layer).
-* To visualise how images are organised in this feature space, implement a nearest neighbour analysis.
-* For each test image, find the 5 nearest neighbours in the training set.
-* Use **Euclidean distance** to compare the feature vector from the test image to the feature vectors of the training images.
-* In your write-up, show nearest neighbours for multiple test images to illustrate the feature space and explain your model’s performance.
+* Visualise the feature space that your network uses to classify images by implementing a nearest neighbour analysis. ✔
+* Use the embedding from the last convolutional layer of your network from part 1.2 after it has been maxpooled (e.g., extract this layer at the point at which it is flattened and sent to the classification layer). ✔
+* To visualise how images are organised in this feature space, implement a nearest neighbour analysis. ✔
+* For each test image, find the 5 nearest neighbours in the training set. ✔
+* Use **Euclidean distance** to compare the feature vector from the test image to the feature vectors of the training images. ✔
+* In your write-up, show nearest neighbours for multiple test images to illustrate the feature space and explain your model’s performance. 
 * Critically evaluate your model – has it learned a good feature space for this classification task?
 
 

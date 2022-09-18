@@ -38,10 +38,9 @@ val_data = tf.keras.utils.image_dataset_from_directory(
 # Output list of class names
 class_names = train_data.class_names
 print(class_names)
+train_images = train_data.file_paths
+print(train_images)
 
-for images, labels in val_data.take(1):
-    print(images)
-    print(labels)
 
 # Plot training and validation accuracy of a model
 def plot_model_history(history):
